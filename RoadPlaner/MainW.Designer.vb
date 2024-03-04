@@ -119,7 +119,13 @@ Partial Class MainW
         Me.KryptonRibbonGroupCheckBox1 = New Krypton.Ribbon.KryptonRibbonGroupCheckBox()
         Me.KryptonRibbonGroupClusterButton1 = New Krypton.Ribbon.KryptonRibbonGroupClusterButton()
         Me.KryptonRibbonGroupClusterButton2 = New Krypton.Ribbon.KryptonRibbonGroupClusterButton()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.KryptonRibbonGroup11 = New Krypton.Ribbon.KryptonRibbonGroup()
+        Me.KryptonRibbonGroupTriple10 = New Krypton.Ribbon.KryptonRibbonGroupTriple()
+        Me.KryptonRibbonGroupButton30 = New Krypton.Ribbon.KryptonRibbonGroupButton()
+        Me.KryptonRibbonGroupButton31 = New Krypton.Ribbon.KryptonRibbonGroupButton()
         CType(Me.KryptonRibbon1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'KryptonRibbon1
@@ -131,7 +137,8 @@ Partial Class MainW
         Me.KryptonRibbon1.QATButtons.AddRange(New System.ComponentModel.Component() {Me.NewFileQ, Me.OpenFileQ, Me.SaveQ, Me.UndoQ, Me.RedoQ, Me.ZoomFillQ, Me.ZoomOutQ, Me.ZoomInQ, Me.ZoomFitQ, Me.SettingsQ})
         Me.KryptonRibbon1.RibbonAppButton.AppButtonMinRecentSize = New System.Drawing.Size(250, 500)
         Me.KryptonRibbon1.RibbonTabs.AddRange(New Krypton.Ribbon.KryptonRibbonTab() {Me.KryptonRibbonTab1, Me.KryptonRibbonTab2, Me.KryptonRibbonTab3, Me.KryptonRibbonTab4, Me.KryptonRibbonTab5, Me.KryptonRibbonTab6, Me.KryptonRibbonTab7})
-        Me.KryptonRibbon1.SelectedTab = Me.KryptonRibbonTab1
+        Me.KryptonRibbon1.SelectedContext = Nothing
+        Me.KryptonRibbon1.SelectedTab = Me.KryptonRibbonTab3
         Me.KryptonRibbon1.Size = New System.Drawing.Size(1924, 171)
         Me.KryptonRibbon1.TabIndex = 7
         '
@@ -593,6 +600,7 @@ Partial Class MainW
         '
         'KryptonRibbonTab3
         '
+        Me.KryptonRibbonTab3.Groups.AddRange(New Krypton.Ribbon.KryptonRibbonGroup() {Me.KryptonRibbonGroup11})
         Me.KryptonRibbonTab3.Text = "Horizontal"
         '
         'KryptonRibbonTab4
@@ -611,17 +619,40 @@ Partial Class MainW
         '
         Me.KryptonRibbonTab7.Text = "Help"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 177)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(1900, 866)
+        Me.PictureBox1.TabIndex = 8
+        Me.PictureBox1.TabStop = False
+        '
+        'KryptonRibbonGroup11
+        '
+        Me.KryptonRibbonGroup11.Items.AddRange(New Krypton.Ribbon.KryptonRibbonGroupContainer() {Me.KryptonRibbonGroupTriple10})
+        '
+        'KryptonRibbonGroupTriple10
+        '
+        Me.KryptonRibbonGroupTriple10.Items.AddRange(New Krypton.Ribbon.KryptonRibbonGroupItem() {Me.KryptonRibbonGroupButton30, Me.KryptonRibbonGroupButton31})
+        '
+        'KryptonRibbonGroupButton30
+        '
+        Me.KryptonRibbonGroupButton30.ImageLarge = CType(resources.GetObject("KryptonRibbonGroupButton30.ImageLarge"), System.Drawing.Image)
+        Me.KryptonRibbonGroupButton30.ImageSmall = CType(resources.GetObject("KryptonRibbonGroupButton30.ImageSmall"), System.Drawing.Image)
+        '
         'MainW
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1924, 1055)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.KryptonRibbon1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "MainW"
         Me.Text = "Road Planner"
         CType(Me.KryptonRibbon1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -722,4 +753,9 @@ Partial Class MainW
     Friend WithEvents KryptonRibbonGroupButton15 As Krypton.Ribbon.KryptonRibbonGroupButton
     Friend WithEvents KryptonRibbonGroupButton17 As Krypton.Ribbon.KryptonRibbonGroupButton
     Friend WithEvents KryptonRibbonGroupCustomControl1 As Krypton.Ribbon.KryptonRibbonGroupCustomControl
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents KryptonRibbonGroup11 As Krypton.Ribbon.KryptonRibbonGroup
+    Friend WithEvents KryptonRibbonGroupTriple10 As Krypton.Ribbon.KryptonRibbonGroupTriple
+    Friend WithEvents KryptonRibbonGroupButton30 As Krypton.Ribbon.KryptonRibbonGroupButton
+    Friend WithEvents KryptonRibbonGroupButton31 As Krypton.Ribbon.KryptonRibbonGroupButton
 End Class
