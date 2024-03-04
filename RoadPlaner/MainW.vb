@@ -5,7 +5,7 @@ Imports RoadLib
 Public Class MainW
 
 
-
+    Dim Zoom As Integer
 
 
     Private Sub MainW_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -18,7 +18,7 @@ Public Class MainW
     Private Sub WriteText()
         Dim StrList() As String
         Dim LangF As New RoadLib.Language
-        StrList = LangF.Lang(LanguageSettingSet())
+        StrList = LangF.Lang(LanguageSettingGet())
         KryptonRibbon1.RibbonAppButton.AppButtonText() = StrList(0)
         KryptonRibbonTab1.Text = StrList(1)
         KryptonRibbonTab2.Text = StrList(2)
@@ -47,9 +47,7 @@ Public Class MainW
 
     End Sub
 
-    Private Sub KryptonRibbonGroup1_DialogBoxLauncherClick(sender As Object, e As EventArgs) Handles KryptonRibbonGroup1.DialogBoxLauncherClick
 
-    End Sub
 
     Private Sub SettingsQ_Click(sender As Object, e As EventArgs) Handles SettingsQ.Click
         Dim Frm As New Settings
@@ -57,5 +55,25 @@ Public Class MainW
         Frm.ShowDialog()
 
         Frm.Dispose()
+    End Sub
+
+
+
+    Private Sub MainW_Paint(sender As Object, e As PaintEventArgs) Handles Me.Paint
+        WriteText()
+    End Sub
+
+    Private Sub PictureBox1_MouseWheel(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseWheel
+        If e.Delta > 0 Then
+            Zoom += 1
+
+        Else
+            Zoom -= 1
+
+        End If
+    End Sub
+
+    Private Sub KryptonRibbonGroupButton3_Click(sender As Object, e As EventArgs) Handles KryptonRibbonGroupButton3.Click
+
     End Sub
 End Class
