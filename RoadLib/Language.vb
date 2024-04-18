@@ -23,7 +23,7 @@
         Dim objReaderFr As New System.IO.StreamReader(FileFr)
         Dim objReaderEn As New System.IO.StreamReader(FileEn)
         Dim objReaderAr As New System.IO.StreamReader(FileAr)
-        Dim A As String
+
         Do While objReaderFr.Peek() <> -1 And objReaderEn.Peek() <> -1
             Dim P As LangS
             P.French = objReaderFr.ReadLine()
