@@ -118,6 +118,12 @@
     <Compile Include="Settings.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SurvyTXT.Designer.vb">
+      <DependentUpon>SurvyTXT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SurvyTXT.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainW.resx">
@@ -131,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Settings.resx">
       <DependentUpon>Settings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SurvyTXT.resx">
+      <DependentUpon>SurvyTXT.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -151,6 +160,9 @@
       <Project>{66513798-4aff-41b8-be16-9ab347d40303}</Project>
       <Name>RoadLib</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

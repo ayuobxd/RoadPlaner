@@ -23,7 +23,7 @@ Public Class Settings
         ElseIf LSetting = "Ar" Then
             KryptonComboBox1.SelectedIndex = 2
         End If
-        jjj
+
 
 
     End Sub
