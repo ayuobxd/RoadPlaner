@@ -104,4 +104,5 @@ Public Class Settings
             VScrollBar1.Value = Scrol
         End If
     End Sub
+    'hi
 End Class
