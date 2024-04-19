@@ -224,6 +224,6 @@ Public Class MainW
         World.Y = (ScrPos.Y + OffsetZoom.Y) / _Scale - OffsetPan.Y
         Return World
     End Function
-    'gg hblt nchlh ymchi
+    'gg done
 
 End Class
